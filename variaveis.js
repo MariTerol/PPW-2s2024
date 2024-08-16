@@ -10,4 +10,15 @@ if(i>1){
 var j = 3;
 j = 2;
 var j = 1;
-console.log(j);
+
+if(true){
+    var x = 7;
+}
+//console.log(x);
+
+let z = 3;
+z=2;
+
+minhaStringA = 'texto 1';
+minhaStringB = "texto '2'";
+console.log(minhaStringB);
