@@ -21,4 +21,18 @@ z=2;
 
 minhaStringA = 'texto 1';
 minhaStringB = "texto '2'";
-console.log(minhaStringB);
+minhaStringC = `texto ${Z}`;
+
+console.log(minhaStringC);
+
+let n1 = .5;
+let n2 = 3;
+let n3 = 1.0;
+
+let b1 = true;
+let b2 = false;
+
+let c1;
+console.log(c1);
+
+let conexao = conectar();
