@@ -4,12 +4,20 @@
  * @returns {boolean}
  */
 function verificarNumeroPrimo(n){
-    if(n%i == 0){
-        return true;
-    }else{
-        return false;
+ 
+    if (n<=1) return false;
+    if(n==2) return true;
+    if(n%2==0) return false;
+    
+    for(let i=3;i<= Math.sqrt(n);i+=2){
+        if(n%i==0){
+            return false;
+        }
     }
+       return true;
 }
-
-console.log(verificarNumeroPrimo(2));
-console.log(verificarNumeroPrimo(3));
+   
+    let n = prompt("Informe um numero: ");
+    
+    let resultado = verificarNumeroPrimo(n);
+    console.log(`O numero ${n} é primo? ${resultado}`);
