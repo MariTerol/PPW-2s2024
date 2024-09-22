@@ -7,7 +7,7 @@ app.set('view engine', 'html');
 app.set('views', __dirname + '/views');
 
 app.get('/', (req,res)=>{
-    res.render('app html');
+    res.render('index.html');
 });
 
 const PORT = 8080;
