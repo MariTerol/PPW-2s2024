@@ -14,7 +14,10 @@ app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res)=>{
     let erro_form = req.query.erro_form;
-    res.render('index.html', {erro_form});
+    let nome = req.query.nome;
+    let data_nascimento = req.query.data_nascimento;
+    let descricao = req.query.descricao;
+    res.render('index.html', {erro_form, nome, data_nascimento, descricao});
 });
 
 app.post('/dados', (req, res)=>{
@@ -38,7 +41,7 @@ app.post('/dados', (req, res)=>{
     }
 
     if (erro_form) {
-        res.redirect('/?erro_form=true');
+        res.redirect(`/?erro_form&nome=${dados.nome}&data_nascimento=${dados.data_nascimento}&descricao=${dados.descricao}`);
     }else{
         res.render('dados.html', {dados});
     }
